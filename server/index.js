@@ -10,4 +10,6 @@ app.get('/', function(req, res){
 
 const port = process.env.PORT || 4005
 
-app.listen(port, () => {console.log(`Listening on port ${port}`)})
+
+
+app.use('/js', express.static(path.join(__dirname, 'server/index.js')))
